@@ -1,14 +1,14 @@
 Pod::Spec.new do |spec|
 
   spec.name         = "NFCPassportReader"
-  spec.version      = "2.0.2"
+  spec.version      = "2.0.3"
   spec.summary      = "This package handles reading an NFC Enabled passport using iOS 13 CoreNFC APIS"
 
   spec.homepage     = "https://github.com/AndyQ/NFCPassportReader"
   spec.license      = "MIT"
   spec.author       = { "Andy Qua" => "andy.qua@gmail.com" }
   spec.platform = :ios
-  spec.ios.deployment_target = "12.0"
+  spec.ios.deployment_target = "15.0"
 
   spec.source       = { :git => "https://github.com/AndyQ/NFCPassportReader.git", :tag => "#{spec.version}" }
 
@@ -16,7 +16,7 @@ Pod::Spec.new do |spec|
 
   spec.swift_version = "5.0"
 
-  spec.dependency "OpenSSL-Universal", '1.1.1900'
+  spec.dependency "OpenSSL-Universal", '1.1.2100'
   spec.xcconfig          = { 'OTHER_LDFLAGS' => '-weak_framework CryptoKit -weak_framework CoreNFC -weak_framework CryptoTokenKit' }
 
   spec.pod_target_xcconfig = {
